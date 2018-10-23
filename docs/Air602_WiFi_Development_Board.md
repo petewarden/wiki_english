@@ -19,7 +19,7 @@ This wiki works for both Air602 WiFi Development Board and Air602 WiFi Module.
 
 ## Getting Started
 
-We use the serial port tool **sscom** to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**
+We use the serial port tool **sscom** on Windows to send the AT command. You can use your favorite serial port tool, in case you want to use **sscom**
 
 You can download it [Here](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/res/sscom51.zip). 
 
@@ -27,8 +27,15 @@ What ever, please make sure you have checked the option **AddCrLf**, and set the
 
 [](https://github.com/SeeedDocument/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/raw/master/img/AT_2.jpg)
 
+If you're running on Linux, you can use the `screen` tool, running a command like this:
 
-You can use the following commad to check if the connection was successfully established. 
+```
+screen /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0 115200
+```
+
+You'll need to replace the exact file name in this command with the one that appears when you plug in your device. This will open up a session in `screen` which you can exit by pressing CTRL-A and then 'd'.
+
+You can use the following command to check if the connection was successfully established. 
 
 ```C
 AT+
